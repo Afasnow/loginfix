@@ -8,14 +8,34 @@ $links = [
     [
         "href" => [
             [
-                "section_text" => "User",
+                "section_text" => "Multimedia",
                 "section_list" => [
-                    ["href" => "user", "text" => "Data User"],
-                    ["href" => "user.new", "text" => "Buat User"]
+                    ["href" => "material_mulmed", "text" => "Material Multimedia"],
+                    // ["href" => "user.new", "text" => "Buat User"]
+                ]
+            ],
+            [
+                "section_text" => "Gudang",
+                "section_list" => [
+                    ["href" => "material_gudang", "text" => "Material Gudang"],
+                    // ["href" => "user.new", "text" => "Buat User"]
                 ]
             ]
         ],
-        "text" => "User",
+        "text" => "Detail Material",
+        "is_multi" => true,
+    ],
+    [
+        "href" => [
+            [
+                "section_text" => "New",
+                "section_list" => [
+                    ["href" => "new", "text" => "New Data"],
+                    ["href" => "new.new", "text" => "New Data 2"]
+                ]
+            ]
+        ],
+        "text" => "New Section",
         "is_multi" => true,
     ],
 ];
@@ -24,14 +44,17 @@ $navigation_links = array_to_object($links);
 
 <div class="main-sidebar">
     <aside id="sidebar-wrapper">
+
         <div class="sidebar-brand">
             <a href="{{ route('dashboard') }}">Dashboard</a>
         </div>
-        <div class="sidebar-brand sidebar-brand-sm">
-            <a href="{{ route('dashboard') }}">
-                <img class="d-inline-block" width="32px" height="30.61px" src="" alt="">
+        <div class="sidebar-brand sidebar-brand-sm ">
+            <a href="{{ route('dashboard') }}" class="d-flex align-items-center justify-content-center">
+                {{-- <img class="d-inline-block" width="32px" height="30.61px" src="" alt=""> --}}
+                <img src="{{ asset('img/logo.png') }}" style="width: 75%;max-height: 42px;height: auto;">
             </a>
         </div>
+
         @foreach ($navigation_links as $link)
         <ul class="sidebar-menu">
             <li class="menu-header">{{ $link->text }}</li>

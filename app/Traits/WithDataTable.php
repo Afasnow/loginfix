@@ -4,7 +4,7 @@ namespace App\Traits;
 
 
 trait WithDataTable {
-    
+
     public function get_pagination_data ()
     {
         switch ($this->name) {
