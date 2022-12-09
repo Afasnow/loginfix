@@ -48,3 +48,4 @@ $ php artisan storage:link
     <img src="https://telegra.ph/file/8741e5fc455f02571b4c2.png" width="80%" height="auto" />
 </p>
 # loginfix
+# loginfix
