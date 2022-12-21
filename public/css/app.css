@@ -5685,7 +5685,7 @@ textarea.form-control-lg {
   color: var(--cui-card-color, unset); */
   
   position: absolute;
-  inset: 10px;
+  inset: 5px;
   border-radius: 8px;
   background: #28292d;
   z-index: 10;
